@@ -180,6 +180,9 @@ impl CompileCmd {
                 ".ibc.applications.interchain_accounts.controller.v1",
                 attrs_serde,
             )
+            .type_attribute(".cosmos.crypto", attrs_serde)
+            .type_attribute(".cosmos.base.abci", attrs_serde)
+            .type_attribute(".cosmos.tx", attrs_serde)
             .type_attribute(".cosmos.upgrade.v1beta1", attrs_serde)
             .type_attribute(".cosmos.base.v1beta1", attrs_serde)
             .type_attribute(".cosmos.base.query.v1beta1", attrs_serde)

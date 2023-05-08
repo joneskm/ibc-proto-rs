@@ -1,5 +1,6 @@
 /// TxResponse defines a structure containing relevant tx data and metadata. The
 /// tags are stringified and the log is JSON decoded.
+#[cfg_attr(feature = "std", derive(::serde::Serialize, ::serde::Deserialize))]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TxResponse {
@@ -52,6 +53,7 @@ pub struct TxResponse {
     pub events: ::prost::alloc::vec::Vec<::tendermint_proto::abci::Event>,
 }
 /// ABCIMessageLog defines a structure containing an indexed tx ABCI message log.
+#[cfg_attr(feature = "std", derive(::serde::Serialize, ::serde::Deserialize))]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AbciMessageLog {
@@ -66,6 +68,7 @@ pub struct AbciMessageLog {
 }
 /// StringEvent defines en Event object wrapper where all the attributes
 /// contain key/value pairs that are strings instead of raw bytes.
+#[cfg_attr(feature = "std", derive(::serde::Serialize, ::serde::Deserialize))]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct StringEvent {
@@ -76,6 +79,7 @@ pub struct StringEvent {
 }
 /// Attribute defines an attribute wrapper where the key and value are
 /// strings instead of raw bytes.
+#[cfg_attr(feature = "std", derive(::serde::Serialize, ::serde::Deserialize))]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Attribute {
@@ -85,6 +89,7 @@ pub struct Attribute {
     pub value: ::prost::alloc::string::String,
 }
 /// GasInfo defines tx execution gas context.
+#[cfg_attr(feature = "std", derive(::serde::Serialize, ::serde::Deserialize))]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GasInfo {
@@ -96,6 +101,7 @@ pub struct GasInfo {
     pub gas_used: u64,
 }
 /// Result is the union of ResponseFormat and ResponseCheckTx.
+#[cfg_attr(feature = "std", derive(::serde::Serialize, ::serde::Deserialize))]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Result {
@@ -123,6 +129,7 @@ pub struct Result {
 }
 /// SimulationResponse defines the response generated when a transaction is
 /// successfully simulated.
+#[cfg_attr(feature = "std", derive(::serde::Serialize, ::serde::Deserialize))]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SimulationResponse {
@@ -133,6 +140,7 @@ pub struct SimulationResponse {
 }
 /// MsgData defines the data returned in a Result object during message
 /// execution.
+#[cfg_attr(feature = "std", derive(::serde::Serialize, ::serde::Deserialize))]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgData {
@@ -143,6 +151,7 @@ pub struct MsgData {
 }
 /// TxMsgData defines a list of MsgData. A transaction will have a MsgData object
 /// for each message.
+#[cfg_attr(feature = "std", derive(::serde::Serialize, ::serde::Deserialize))]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TxMsgData {
@@ -159,6 +168,7 @@ pub struct TxMsgData {
     >,
 }
 /// SearchTxsResult defines a structure for querying txs pageable
+#[cfg_attr(feature = "std", derive(::serde::Serialize, ::serde::Deserialize))]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchTxsResult {
