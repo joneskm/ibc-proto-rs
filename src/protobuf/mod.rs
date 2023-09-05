@@ -55,7 +55,7 @@
 //!
 //! impl Protobuf<MyRawType> for MyDomainType {}
 //! ```
-mod erased;
+pub mod erased;
 mod error;
 
 #[allow(unused_imports)]
